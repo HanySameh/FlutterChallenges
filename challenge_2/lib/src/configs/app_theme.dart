@@ -37,49 +37,49 @@ class AppTheme {
             ),
           ),
         ),
-        textTheme: const TextTheme(
-          headline6: TextStyle(
+        textTheme:  const TextTheme(
+          titleLarge: TextStyle(
             fontFamily: FontFamily.avenir,
             fontWeight: FontWeight.bold,
             fontSize: 18,
             color: ColorName.primaryTextColor,
           ),
-          headline5: TextStyle(
+          headlineSmall: TextStyle(
             fontFamily: FontFamily.avenir,
             fontWeight: FontWeight.w700,
             fontSize: 20,
             color: ColorName.primaryTextColor,
           ),
-          headline4: TextStyle(
+          headlineMedium: TextStyle(
             fontFamily: FontFamily.avenir,
             fontWeight: FontWeight.w700,
             fontSize: 24,
             color: ColorName.primaryTextColor,
           ),
-          caption: TextStyle(
+          bodySmall: TextStyle(
             fontFamily: FontFamily.avenir,
             fontWeight: FontWeight.w700,
             fontSize: 14,
             color: ColorName.captionTextColor,
           ),
-          subtitle1: TextStyle(
+          titleMedium: TextStyle(
             fontFamily: FontFamily.avenir,
             fontWeight: FontWeight.w200,
             fontSize: 18,
             color: ColorName.secondaryTextColor,
           ),
-          subtitle2: TextStyle(
+          titleSmall: TextStyle(
             fontFamily: FontFamily.avenir,
             fontWeight: FontWeight.w400,
             fontSize: 14,
             color: ColorName.primaryTextColor,
           ),
-          bodyText2: TextStyle(
+          bodyMedium: TextStyle(
             fontFamily: FontFamily.avenir,
             fontSize: 12,
             color: ColorName.secondaryTextColor,
           ),
-          bodyText1: TextStyle(
+          bodyLarge: TextStyle(
             fontFamily: FontFamily.avenir,
             fontWeight: FontWeight.w400,
             fontSize: 14,

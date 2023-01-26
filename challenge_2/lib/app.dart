@@ -1,15 +1,45 @@
+import 'package:challenge_2/src/bloc/on_boarding_bloc/on_boarding_bloc.dart';
 import 'package:challenge_2/src/configs/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'src/bloc/auth_bloc/auth_bloc.dart';
+import 'src/bloc/splash_bloc/splash_bloc.dart';
+import 'src/configs/app_routes.dart';
+import 'src/data/local/app_data_source.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'One Pice Blog Challenge',
-      theme: AppTheme.lightTheme,
-      home: null,
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider(
+          create: (context) => AppDataSource(),
+          lazy: true,
+        ),
+        RepositoryProvider(
+          create: (context) => SplashBloc(),
+          lazy: true,
+        ),
+        RepositoryProvider(
+          create: (context) => OnBoardingBloc(
+              appDataSource: RepositoryProvider.of<AppDataSource>(context)),
+          lazy: true,
+        ),
+        RepositoryProvider(
+          create: (context) => AuthBloc(),
+          lazy: true,
+        ),
+      ],
+      child: MaterialApp(
+        title: 'One Pice Club Challenge',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.lightTheme,
+        initialRoute: AppRoutes.kSplashRoute,
+        onGenerateRoute: AppRoutes.generateRoute,
+      ),
     );
   }
 }
