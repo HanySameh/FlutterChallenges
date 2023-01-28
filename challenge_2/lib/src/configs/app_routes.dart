@@ -3,8 +3,11 @@ import 'package:challenge_2/src/view/screens/on_boarding_screen.dart';
 import 'package:challenge_2/src/view/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../view/screens/article/article_screen.dart';
 import '../view/screens/home/home_screen.dart';
 import '../view/screens/main/main_screen.dart';
+import '../view/screens/profile/profile_screen.dart';
+import '../view/screens/search_screen.dart';
 
 class AppRoutes {
   static const String kSplashRoute = '/';
@@ -47,6 +50,35 @@ class AppRoutes {
             offstage:
                 ((settings.arguments) as Map<String, dynamic>)['offStage'],
             child: const HomeScreen(),
+          ),
+        );
+        break;
+      case kArticleScreenRoute:
+        route = MaterialPageRoute(
+          builder: (_) => Offstage(
+            offstage:
+                ((settings.arguments) as Map<String, dynamic>)['offStage'],
+            child: ArticleScreen(
+                callback:
+                    ((settings.arguments) as Map<String, dynamic>)['callback']),
+          ),
+        );
+        break;
+      case kSearchScreenRoute:
+        route = MaterialPageRoute(
+          builder: (_) => Offstage(
+            offstage:
+                ((settings.arguments) as Map<String, dynamic>)['offStage'],
+            child: const SearchScreen(),
+          ),
+        );
+        break;
+      case kProfileScreenRoute:
+        route = MaterialPageRoute(
+          builder: (_) => Offstage(
+            offstage:
+                ((settings.arguments) as Map<String, dynamic>)['offStage'],
+            child: ProfileScreen(),
           ),
         );
         break;

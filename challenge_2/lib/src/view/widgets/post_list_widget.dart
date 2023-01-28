@@ -133,7 +133,7 @@ class PostListWidget extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),

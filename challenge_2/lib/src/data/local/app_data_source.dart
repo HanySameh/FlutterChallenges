@@ -1,4 +1,5 @@
 import '../../../gen/assets.gen.dart';
+import '../models/article_model.dart';
 import '../models/category_model.dart';
 import '../models/on_boarding_model.dart';
 import '../models/post_model.dart';
@@ -119,7 +120,8 @@ class AppDataSource {
       id: '@HanySameh',
       fullName: 'Hany Sameh',
       field: 'Mobile App Dev',
-      aboutMe: '',
+      aboutMe:
+          'I\'m creative Mobile App Developer based in Egypt With 2 years of experience as a mobile developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.',
       posts: posts,
       following: '200',
       followers: '8.5k',
@@ -160,5 +162,20 @@ class AppDataSource {
         imageFileName: Assets.img.posts.large.largePost6.path,
       ),
     ];
+  }
+
+  ArticleModel get article {
+    return ArticleModel(
+      author: 'Richard Gervain',
+      title: 'Four Things Every Woman Needs To Know',
+      caption: 'A man\'s sexuality is never your mind responsibility.',
+      description:
+          'This one got an incredible amount of backlash the last time I said it, so I\'m going to say it again: a man\'s sexuality is never, ever your responsibility, under any circumstances. Whether it\'s the fifth date or your twentieth year of marriage, the correct determining factor for whether or not you have sex with your partner isn\'t whether you ought to “take care of him” or “put out” because it\'s been a while or he\'s really horny — the correct determining factor for whether or not you have sex is whether or not you want to have sex.This one got an incredible amount of backlash the last time I said it, so I\'m going to say it again: a man\'s sexuality is never, ever your responsibility, under any circumstances. Whether it\'s the fifth date or your twentieth year of marriage, the correct determining factor for whether or not you have sex with your partner isn\'t whether you ought to “take care of him” or “put out” because it\'s been a while or he\'s really horny — the correct determining factor for whether or not you have sex is whether or not you want to have sex.This one got an incredible amount of backlash the last time I said it, so I\'m going to say it again: a man\'s sexuality is never, ever your responsibility, under any circumstances. Whether it\'s the fifth date or your twentieth year of marriage, the correct determining factor for whether or not you have sex with your partner isn\'t whether you ought to “take care of him” or “put out” because it\'s been a while or he\'s really horny — the correct determining factor for whether or not you have sex is whether or not you want to have sex.',
+      likes: '2.1k',
+      time: '2m ago',
+      isBookmarked: false,
+      postImageFileName: Assets.img.posts.singlePost.path,
+      authorImageFileName: Assets.img.stories.story9.path,
+    );
   }
 }
