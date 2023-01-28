@@ -27,7 +27,7 @@ class SignUpWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Welcome to One Pice Club',
+          'Welcome to Blog Club',
           style: AppTheme.lightTheme.textTheme.headlineMedium,
         ),
         const SizedBox(
